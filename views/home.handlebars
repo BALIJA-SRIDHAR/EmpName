@@ -1,0 +1,29 @@
+<form action="" method="post" enctype="application/x-www-form-urlencoded">
+<label for="emp">Enter Employee Name</label>
+<input type="text" name="empName" id="emp">
+<button type="submit">CREATE EMPLOYEE</button>
+<button type="reset">CLEAR EMPLOYEE</button>
+</form>
+
+<div class="name">
+<table cellpadding="10px" >
+    <tr>
+        <th>EMPLOYEE NAME</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+{{#each data}}
+     <tr>
+        <td>{{empName}}</td>
+        <td><a href="/Employee/{{_id}}"><img src="/images/4519462.png" alt="EDIT"  height="30px" width="30px"></a></td>
+        <td>
+          <form action="/Employee/{{_id}}?_method=DELETE" method="post" enctype="application/x-www-form-urlencoded">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit"><img src="/images/3096687.png" alt="DELETE" height="20px" width="20px" ></button>
+          </form>
+          </td>
+      </tr>
+{{/each}}
+</table>
+</div>
+</div>

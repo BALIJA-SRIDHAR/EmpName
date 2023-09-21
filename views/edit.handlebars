@@ -1,0 +1,6 @@
+<form action="/Employee/{{updateEmpData._id}}?_method=PUT" method="post" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="_method" value="PUT">
+<label for="update">Update EmpName</label>
+<input type="text" name="empName" id="update" value="{{updateEmpData.empName}}">
+<button type="submit">submit</button>
+</form>
